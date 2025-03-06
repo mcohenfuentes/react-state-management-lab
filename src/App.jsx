@@ -134,7 +134,7 @@ const App = () => {
       ) : (
         <ul>
           {team.map((fighter) => (
-            <div key={fighter}>
+            <div key={fighter.id}>
               <p>{fighter.name}</p>
               <img src={fighter.img}></img>
               <p>Price: ${fighter.price}</p>
@@ -149,6 +149,7 @@ const App = () => {
       <ul>
         {zombieFighters.map((zombieFighter) =>
           <div key={zombieFighter.id}>
+            <img src={zombieFighter.img}></img>
             <p>{zombieFighter.name}</p>
             <p>Price: ${zombieFighter.price}</p>
             <p>Strength: {zombieFighter.strength}</p>
